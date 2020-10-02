@@ -1,10 +1,11 @@
 # require modules here
 require "yaml"
 
-hash = 
+
 
 def load_library
   # code goes here
+  hash = YAML.load_file('emoticons.yml')
   
 end
 
