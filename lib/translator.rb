@@ -18,8 +18,13 @@ def load_library(file_path)
   result
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(path, emoticon)
   # code goes here
+  load_library(path).each_pair do |k, v|
+    if v[:english] == emoticon
+      return v[:japanese]
+  end
+  
   
 end
 
