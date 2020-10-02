@@ -23,11 +23,15 @@ def get_japanese_emoticon(path, emoticon)
   load_library(path).each_pair do |k, v|
     if v[:english] == emoticon
       return v[:japanese]
+    end
   end
-  
-  
 end
 
-def get_english_meaning
+def get_english_meaning(path,emoticon)
   # code goes here
+   load_library(path).each_pair do |k, v|
+    if v[:japanese] == emoticon
+      return k
+    end
+  end
 end
